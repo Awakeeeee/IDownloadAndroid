@@ -120,6 +120,8 @@ public class MainActivity extends AppCompatActivity
             int status = cur.getInt(columnStatus);
             return status == DownloadManager.STATUS_SUCCESSFUL;
         }
+        Toast.makeText(this, "The query id is not found: " + downloadId, Toast.LENGTH_SHORT).show();
+        return false;
     }
 
     //进行下载的方法,可以关联在ui交互上
@@ -251,7 +253,7 @@ public class MainActivity extends AppCompatActivity
 
         String percentProgress = String.format("%.2f", progress * 100f) + "%";
         Toast toast = Toast.makeText(MainActivity.this,
-                "Download status:\n" + statusText + "\n\n" + "Status reason\n" + reasonText + "\n\n" + "Progress: " + percentProgress,
+                "Download status:\n" + statusText + "\n\n" + "Status reason:\n" + reasonText + "\n\n" + "Progress: " + percentProgress,
                 Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP, 25, 400);
         toast.show();
