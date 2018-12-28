@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">IDownload</string>
+    <string name="channel_name">CHANNEL_OF_QIQIQI</string>
+    <string name="channel_description">THIS IS THE NOTIFICATION CHANNEL OF QI GEGE</string>
 </resources>
